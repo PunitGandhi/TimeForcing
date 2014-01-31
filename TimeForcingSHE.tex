@@ -66,13 +66,13 @@ The Swift Hohenberg equation has a stable attracting periodic solution for suffi
 \maketitle
 
 \section{Introduction}
-The Swift-Hohenberg equation (SHE) serves as a model for pattern formation in a broad range of physical systems.   This equation, which takes the form  
+The Swift-Hohenberg equation~\cite{swift1977} (SHE) serves as a model for pattern formation in a broad range of physical systems~\cite{}.  The existence, structure, and stability of localized solutions within the SHE has been studied in great detail~\cite{burke2006,burke2007snakes,burke2007stability}.   This equation, which takes the form  
 \begin{equation}
 u_t= r u-\left(1+\partial_{x}^2\right)^2u+N[u]\label{eq:SH},
 \end{equation}
 describes the dynamics of a real field $u$ over one spatial dimension in time, where $N$ is some nonlinear function of $u$.  We have rescaled the equation so that the critical wavenumber that defines the natural wavelength of the patterned state is unity.  We will be interested in two possible choices of $N$, namely $N_{23}[u]=bu^2-u^3$ and $N_{35}[u]=b u^3-u^5$.  The strength of the linear forcing term $r$ and the strength of the quadratic nonlinearity $b$ are left as parameters of the system.  
 
-We consider the case when the forcing is no longer constant in time, namely $r\rightarrow r_0+\delta r \sin\omega t$.  Pattern formation in ecological systems that are periodically forced by the seasons or the daily variations in insolar flux are one example of a physical motivation for considering this kind of system \cite{}.  Other physical systems that might be described by such a periodically forced model include ... \cite{}.   Furthermore, oscillations that effectively create and destroy attractors have been shown to produce new ``ghost" attractors that do not exist in the time-independent system for any value of the parameter\cite{}.  While this has been done for the case of simple oscillators, it would be interesting to find the analogous dynamics for more complicated pde systems that oscillate between states.
+We consider the case when the forcing is no longer constant in time, namely $r\rightarrow r_0+\delta r \sin\omega t$.  Pattern formation in ecological systems that are periodically forced by the seasons or the daily variations in insolar flux are one example of a physical motivation for considering this kind of system \cite{}.  Other physical systems that might be described by such a periodically forced model include ... \cite{}.   Furthermore, oscillations that effectively create and destroy attractors have been shown to produce new ``ghost" attractors that do not exist in the time-independent system for any value of the parameter\cite{}.  While this has been done for the case of simple oscillators, it would be interesting to find the analogous dynamics for infinite dimensional systems that periodically move between different states in parameter space.
 
 We first recount the relevant details of the original Swift-Hohenberg equation before discussing some numerical results of the time-dependent forced case.  Hopefully we will also eventually add a section describing some theoretical understanding of the results we obtained.  Note that all the work done so far is for the $N_{23}$ nonlinearity and $b=1.8$.
 
@@ -87,7 +87,7 @@ Here we will describe the structure of the steady-state solutions of SHE near th
 
 We see that the trivial solution is stable for $r<0$, and becomes unstable as as the periodic solution is created through a bifurcation at $r=0$.  As we are looking at the subcritical case, we see a saddle-node bifurcation of the periodic branch where it gains stability at $SN_P$.  Thus we have only a stable trivial solution for $r<r(SN_P)\approx -0.3744$. At this point, a stable periodic solution is created but is energetically unfavorable to the trivial state.  For $r(E_-)<r<r(E_+)$, we have a zoo of localized solutions (including an entire sequence of stable localized solutions on each snaking branch) that exist in addition to trivial and periodic solutions.  We note that within this region, $r(M)$ indicates the transition from the trivial state being energetically favorable to the periodic state becoming energetically favorable.  We will also find it useful to define the center of the snaking region $C$, which corresponds to  the forcing parameter $r(C)\approx -0.2992$.  Between $r(E_+)$ and $r=0$, we again have only the periodic solution and the trivial solution as stable but with the periodic solution now more energetically favorable.   Finally, for $r>0$, the trivial solution looses stability and only the periodic solution remains as stable.  We note that other stable solutions exist (e.g. the flat, nonzero solutions created at the transcritical bifurcation at $r=1$) but that they do not play a role in our region of interest with our current choice of parameters (e.g. $b=1.8$).  {\it I plan eventually replace J. Burke's figure with one that clearly indicates these different regions}.
 
-In addition to understanding the structure of the stationary solutions, it will also be helpful to understand what is known about the dynamics of the localized solutions when the system is pushed just outside of the snaking region.  Burke and Knobloch \cite{} have shown that near the snaking region (e.g. for $r=r(E_{\pm})\pm\delta$ where $\delta <<1$), a localized solution will move towards the more energetically favorable of the trivial and the periodic state.  Above the snaking region, for example, a localized solution will nucleate periods of the pattern in quick bursts with some longer transition time $T\propto \delta^{-1/2}$ in between each nucleation event.  An numerical example of this using the method of exponential differencing \cite{} to step in time and a domain of 40 periods of the characteristic wavelength is shown in Fig.~\ref{fig:nucleation}.  A localized solution that is stable for $r\approx 0.2944$ is initialized above the snaking region (e.g. $r=0.2$) and allowed to grow until it fills the domain. We note that it grows to a solution containing 39 periods, and a corresponding numerical continuation calculation produces a snaking branch of steady state solutions that emerges as a secondary bifurcation from a 40 period solution by reconnects to a 39 period solution.  This phenomena has been explained \cite{} in terms of the Eckhaus instability for the case of the steady state solutions.  We can see from Fig.~\ref{fig:nucleation} that the time from one nucleation event to the next is approximately 18, though the last nucleation event seems to take a bit longer.  As the transition time $T$ for this case is on the same order as the time over which the nucleation event occurs, we have likely reached the limit of applicability of the theory described above.
+In addition to understanding the structure of the stationary solutions, it will also be helpful to understand what is known about the dynamics of the localized solutions when the system is pushed just outside of the snaking region.  Burke and Knobloch \cite{burke2006} have shown that near the snaking region (e.g. for $r=r(E_{\pm})\pm\delta$ where $\delta <<1$), a localized solution will move towards the more energetically favorable of the trivial and the periodic state.  Above the snaking region, for example, a localized solution will nucleate periods of the pattern in quick bursts with some longer transition time $T\propto \delta^{-1/2}$ in between each nucleation event.  An numerical example of this on a domain of 40 periods of the characteristic wavelength is shown in Fig.~\ref{fig:nucleation}.  A localized solution that is stable for $r\approx 0.2944$ is initialized above the snaking region (e.g. $r=0.2$) and allowed to grow until it fills the domain. We note that it grows to a solution containing 39 periods, and a corresponding numerical continuation calculation produces a snaking branch of steady state solutions that emerges as a secondary bifurcation from a 40 period solution by reconnects to a 39 period solution.  This phenomena has been explained \cite{bergeon2008} in terms of the Eckhaus instability for the case of the steady state solutions.  We can see from Fig.~\ref{fig:nucleation} that the time from one nucleation event to the next is approximately 18, though the last nucleation event seems to take a bit longer.  As the transition time $T$ for this case is on the same order as the time over which the nucleation event occurs, we have likely reached the limit of applicability of the theory described above.
 
 \begin{figure}[h]
   \begin{center}
@@ -102,7 +102,7 @@ In addition to understanding the structure of the stationary solutions, it will 
 
 \section{Numerical results}
 
-All simulations in time used periodic boundary conditions and a domain of $80\pi$ (e.g. 40 characteristic wavelengths).  A 4th order exponential time differencing scheme\cite{} was used to step forward  in time while spectral methods on a grid of 1024 points were used for the spatial calculations.  The  calculation of steady state solutions were done by numerical continuation using AUTO~\cite{}.   We will focus on SHE23 case with $b=1.8$ and will always initialize the problem with a stable localized solution that fills roughly half the domain.  We can vary the way the forcing oscillates ($r\rightarrow r_0+\delta r \sin\omega t$) in 3 ways: (1) the amplitude of the oscillation, $\delta r$ (2) the point about which the oscillation occurs, $r_0$ (3) the frequency with which the oscillation occurs, $\omega$.
+All simulations in time used periodic boundary conditions and a domain of $80\pi$ (e.g. 40 characteristic wavelengths).  A 4th order exponential time differencing scheme\cite{cox2002} was used to step forward  in time while spectral methods on a grid of 1024 points were used for the spatial calculations.  The  calculation of steady state solutions were done by numerical continuation using AUTO~\cite{doedel1981auto}.   We will focus on SHE23 case with $b=1.8$ and will always initialize the problem with a stable localized solution that fills roughly half the domain.  We can vary the way the forcing oscillates ($r\rightarrow r_0+\delta r \sin\omega t$) in 3 ways: (1) the amplitude of the oscillation, $\delta r$ (2) the point about which the oscillation occurs, $r_0$ (3) the frequency with which the oscillation occurs, $\omega$.
 
 The phase space of this problem is infinite dimensional, but can choose a two dimensional slice of the max value vs L2 norm of u to help us visualize trajectories in time.  All the plots will also contain the periodic and snaking branch of the time steady solutions (Fig.~\ref{fig:NormMaxBack}) as reference.  
 
@@ -117,8 +117,58 @@ The phase space of this problem is infinite dimensional, but can choose a two di
   \end{center}
 \end{figure} 
 
-We first oscillate the forcing about the Maxwell point within the snaking region for various frequencies of oscillation.  We note that the time scale on which the nucleation process occurs is 10
+\subsection{Frequency dependence of oscillations within the snaking region}
+We first oscillate the forcing about the Maxwell point within the snaking region ($r_0=-0.3128$ and $\delta r = 0.25$)  for various frequencies (Fig.~\ref{fig:OscInSnake}).   An oscillation period of 100 is sufficiently slow that the trajectory nearly follows the time-independent snaking region.  At a period of 5 and 0.5, we see that the solution may be approaching a steady value but more detailed simulations should be done here.  It may be that the oscillations are fast enough to attempt some averaging techniques to build a theory for this parameter regime.   We note that the time scale on which the nucleation process occurs is 10.
+\begin{figure}[h]
+  \begin{center}
+    \mbox{
+      	\subfloat[$\omega=4\pi$]{\includegraphics[width=40mm]{MinSnakingT05.png}} 
+	\subfloat[$\omega=2\pi/5$]{\includegraphics[width=40mm]{MinSnakingT5.png}} 
+	\subfloat[$\omega=2\pi/50$]{\includegraphics[width=40mm]{MinSnakingT50.png}}
+      	\subfloat[$\omega=2\pi/500$]{\includegraphics[width=40mm]{MinSnakingT500.png} }
+      }
+    \caption{Oscillations of the forcing parameter about the Maxwell point within the snaking region.  The forcing parameter as a function of time is given by $r\rightarrow-0.3128+ 0.025\sin\omega t$ for various values of $\omega$ (a)-(d).  Note that these figures are plotting the maximum value of the solution vs. its L2 norm just as in Fig.~\ref{fig:NormMaxBack} except that they are zoomed into a smaller region of the phase space slice centered around the initial condition (the blue x).  The time-independent snaking branch is also shown here for reference. }
+    \label{fig:OscInSnake}
+  \end{center}
+\end{figure} 
 
+\subsection{frequency dependence of oscillations entering and exiting the snaking region}
+We can now increase the amplitude of oscillation to take the system in and out of the snaking region.  With an amplitude of $\delta r=0.1$ and a frequency of $2\pi/50$, simulations indicate a stable region of $r$ where one period is added and decays at each front during one cycle but there is no net motion. for $ -0.290\le r_0\le-0.285$ the solution ``breathed" by one period at each front, but was stable.  For $r_0 \le -0.295$, in addition to breathing, periods of the solution decayed overall from the solution over the course of many cycles. For $r_0 \ge -0.280$,  periods are nucleated on average. 
+
+If we increase the oscillation period to 100, we see the region of stable breathing is shifted to slightly higher values of $r_0$ (stable at $r_0=-0.285, \, -0.280$ and the breathing involves the nucleation and decay of two periods on each front.  At an oscillation period of 200, the region of stable breathing presumably  occurs between $r_0=-0.28$ and $r_0=-0.275$, but is smaller than $5\times 10^-3$.  The localized pattern nucleates and decays 4 periods within each cycle.  Further simulations could be done to put tighter bounds on these regions, and to ensure that there is no motion of the fronts over many cycles (all simulations here were run for 1000 units of time).   Results from the simulations are shown at the different oscillation frequencies for $r_0=-0.28$ in Fig.~\ref{fig:OscOutSnake}.  We see the localized structure grow when the period is 50, remain stable when the period is 100, and decay when the period is 200.   It is interesting to note from these figures that oscillations in amplitude of the periods at the front are out of phase from the rest of the localized structure.
+
+\begin{figure}[h]
+  \begin{center}
+    \mbox{
+      	\subfloat[$\omega=2\pi/50$]{\includegraphics[width=50mm]{r0nD280drD10t050sol.png}} 
+	\subfloat[$\omega=2\pi/100$]{\includegraphics[width=50mm]{r0nD280drD10t100sol.png}} 
+	\subfloat[$\omega=2\pi/200$]{\includegraphics[width=50mm]{r0nD280drD10t200sol.png}} 
+      } \mbox{
+     	\subfloat[$\omega=2\pi/50$]{\includegraphics[width=50mm]{r0nD280drD10t050phase.png}} 
+	\subfloat[$\omega=2\pi/100$]{\includegraphics[width=50mm]{r0nD280drD10t100phase.png}} 
+	\subfloat[$\omega=2\pi/200$]{\includegraphics[width=50mm]{r0nD280drD10t200phase.png}}
+}
+    \caption{Oscillations of the forcing parameter in and out of the snaking region.  The forcing parameter as a function of time is given by $r\rightarrow -0.28+ 0.1\sin\omega t$ for various values of $\omega$. (a)-(c) show the solution as a function of time and (d)-(f) show the corresponding trajectories along the max value - L2 norm phase space slice (the time-independent snaking branch and periodic branches are also shown here for reference). }
+    \label{fig:OscOutSnake}
+  \end{center}
+\end{figure}
+
+For all three oscillation frequency values explored at with this amplitude, there exist oscillations of the forcing centered about values of $r_0$ greater than the center of the snaking region (and the Maxwell point) that cause the solution to decay.  In these cases, the decay happens even though the forcing spends more time above the snaking region where the solution would be expected to grow than below it.  This seems to imply that the trivial state is more strongly attracting to the left of the snaking region than the periodic state is to the right of the snaking region.  Maybe this has to do with the choice of initial condition, or with the fact that the amplitude chosen takes the system outside of the region on of bistability below the snaking region, but not above.  We would like to note that the region of stable breathing in the simulations did not depend on the phase of the oscillation (e.g. if the forcing parameter increased first or decreased first). 
+
+\subsection{Growing from a localized solution to a domain filling one}
+ 
+Using an oscillation with a period of 50 and centered about $r_0=-0.27$ and amplitude of $\delta r =0.1$, we can see the trajectory taken by the initial localized solution as it approaches a domain filling one (Fig.~\ref{fig:FillDomain}).  The solution grows by nucleating a period on each front at each oscillation of the forcing parameter. This happens until the solution reaches 39 periods, at which point it seems to get stuck.  Eventually it fills the domain with a 40 period solution.  This is in contrast to the case with a constant forcing that grows into the domain with a 39 period solution.  
+
+\begin{figure}[h]
+  \begin{center}
+    \mbox{
+      \subfloat[]{\includegraphics[width=60mm]{r0nD270drD10t050sol.png}} \quad
+      \subfloat[]{\includegraphics[width=60mm]{r0nD270drD10t050phase.png} }
+      }
+    \caption{(a)A plot of the time-steady localized (green dash) and periodic (red dash-dot) solutions as a function of the forcing parameter in the problem with constant $r$ in time.  The blue x indicates the localized initial solution for the simulations with time-periodic forcing.  We note that future plots will zoom into the region near this x.  (b) This same data is plotted in terms of the max value vs L2 norm of the solutions in order to provide some reference for the trajectories of the time-dependent parameter case. }
+    \label{fig:FillDomain}
+  \end{center}
+\end{figure} 
 
 \bibliography{TimeForcingSHE_bibliography}
 
