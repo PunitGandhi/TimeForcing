@@ -4,22 +4,33 @@
 
 \section{Introduction}
 
+Time-dependent forcing can be critical to the understanding of pattern formation in certain systems.  The Earth's rotation and orbit provide a periodic forcing for many systems on Earth.  Some other stuff....
+
+
+The Swift--Hohenberg equation~\cite{swift1977} (SHE) serves as a model for pattern formation in a broad range of physical systems~\cite{}.  The existence, structure, and stability of localized solutions within the SHE has been studied in great detail~\cite{burke2006,burke2007snakes,burke2007stability}.   This equation, which takes the form  
+\begin{equation}
+u_t= r u-\left(1+\partial_{x}^2\right)^2u+N[u]\label{eq:SH},
+\end{equation}
+describes the dynamics of a real field $u$ over one spatial dimension in time, where $N$ is some nonlinear function of $u$.  We have rescaled the equation so that the critical wavenumber that defines the natural wavelength of the patterned state is unity.  We will be interested in two possible choices of $N$, namely $N_{23}[u]=bu^2-u^3$ and $N_{35}[u]=b u^3-u^5$.  The strength of the linear forcing term $r$ and the strength of the quadratic/cubic nonlinearity $b$ are left as parameters of the system.  
+
+We consider the case when the forcing is no longer constant in time, namely $r\rightarrow r_0+\delta r \sin\omega t$.  Pattern formation in ecological systems that are periodically forced by the seasons or the daily variations in insolar flux are one example of a physical motivation for considering this kind of system \cite{}.  Other physical systems that might be described by such a periodically forced model include ... \cite{}.   Furthermore, oscillations that effectively create and destroy attractors have been shown to produce new ``ghost" attractors that do not exist in the time-independent system for any value of the parameter\cite{}.  While this has been done for the case of simple oscillators, the present work provides an extension of these observations to higher dimensions.
+
+
+
+
+All simulations in time used periodic boundary conditions and a domain of $L=80\pi$ (e.g. 40 characteristic wavelengths), unless otherwise noted.  A 4th order exponential time differencing scheme\cite{cox2002} was used to step forward  in time while spectral methods on a grid of 1024 points were used for the spatial calculations.  Steady state solutions of the constant forcing case were computed by numerical continuation using AUTO~\cite{doedel1981auto}.  
+
+
+We first recount the relevant details of the original Swift-Hohenberg equation before discussing some numerical results and theoretical analysis of the periodically forced case.   We begin by examining the  effect of small oscillations on the growth and decay of slightly  unstable localized solutions, and then move to large oscillations that extend through and beyond the pinning region of the constant forcing case.  Finally, discuss the persistence of a localized defect state that would be unstable without the oscillations before concluding with a summary of the results and an outlook on future work.
+
 \subsection{motivation for periodic time forcing in pattern formation}
-\subsection{motivation for SHE}
 \subsection{Description for SHE}
 \subsection{Numerical Methods}
 \subsection{paper outline}
 
-%The Swift--Hohenberg equation~\cite{swift1977} (SHE) serves as a model for pattern formation in a broad range of physical systems~\cite{}.  The existence, structure, and stability of localized solutions within the SHE has been studied in great detail~\cite{burke2006,burke2007snakes,burke2007stability}.   This equation, which takes the form  
-%\begin{equation}
-%u_t= r u-\left(1+\partial_{x}^2\right)^2u+N[u]\label{eq:SH},
-%\end{equation}
-%describes the dynamics of a real field $u$ over one spatial dimension in time, where $N$ is some nonlinear function of $u$.  We have rescaled the equation so that the critical wavenumber that defines the natural wavelength of the patterned state is unity.  We will be interested in two possible choices of $N$, namely $N_{23}[u]=bu^2-u^3$ and $N_{35}[u]=b u^3-u^5$.  The strength of the linear forcing term $r$ and the strength of the quadratic/cubic nonlinearity $b$ are left as parameters of the system.  
-%
-%We consider the case when the forcing is no longer constant in time, namely $r\rightarrow r_0+\delta r \sin\omega t$.  Pattern formation in ecological systems that are periodically forced by the seasons or the daily variations in insolar flux are one example of a physical motivation for considering this kind of system \cite{}.  Other physical systems that might be described by such a periodically forced model include ... \cite{}.   Furthermore, oscillations that effectively create and destroy attractors have been shown to produce new ``ghost" attractors that do not exist in the time-independent system for any value of the parameter\cite{}.  While this has been done for the case of simple oscillators, the present work provides an extension of these observations to higher dimensions.
-%
-%We first recount the relevant details of the original Swift-Hohenberg equation before discussing some numerical results of the time-dependent forced case.  Hopefully we will also eventually add a section describing some theoretical understanding of the results we obtained.  Note that all the work done so far is for the $N_{23}$ nonlinearity and $b=1.8$.
 
+
+% We can vary the way the forcing oscillates ($r\rightarrow r_0+\rho \sin\omega t$) in 3 ways: (1) the amplitude of the oscillation, $\rho$ (2) the point about which the oscillation occurs, $r_0$ (3) the frequency with which the oscillation occurs, $\omega$.    unless otherwise noted,the simulations are initialized with a localized solution that is stable for the constant forcing ($\rho=0$) case with the given choice of $r_0$. 
 
 
 \end{document}

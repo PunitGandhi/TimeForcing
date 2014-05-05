@@ -7,4 +7,37 @@
 \subsection{asymptotic calculation and comparison to numerical result}
 
 
+Following Burke's calculation for the standard SHE to find the time between nucleation events, we derive an equation that estimates the effects of small, slow oscillations on the depinning process. We will perform this calculation just  to the right of $r_+$, the right edge of the pinning region of the constant forcing case (e.g. $r\rightarrow r_++\epsilon^2\delta$).  Note that the exact same procedure could be used to find the time between decay events just to the left of the pinning region.   We will assume small (e.g. $\rho\rightarrow \epsilon^2 \rho$), slow oscillations (e.g. $\omega\rightarrow \epsilon \omega$)  so that the deviation from Burke's calculation will be small in this case.  The equation, in this limit becomes 
+\begin{equation}
+u_t= \left(r_++ \epsilon^2(\delta+ \rho \sin\epsilon\omega t)\right) u-\left(1+\partial_{x}^2\right)^2u+b u^2-u^3\label{eq:SH},
+\end{equation}
+where $r_+$ is the right edge of the pinning region when $\rho,\delta=0$.  Because we are near the pinning region, we can assume the dynamics will be slow and will define the slow timescale $\tau=\epsilon t$ and corresponding time derivative $\partial_t\rightarrow\epsilon\partial_{\tau}$.  After writing u as an asymptotic series, $u=u_0+\epsilon u_1+\epsilon^2 u_2+...$, we can write out the equation order by order in $\epsilon$. At leading order, we have
+\begin{equation}
+r_+u_0-\left(1+\partial_{x}^2\right)^2u_0+b u_0^2-u_0^3=0\label{eq:SH},
+\end{equation}
+and can thus pick $u_0$ to be a localized solution at a saddle-node bifurcation of the snaking branch.  Thus $u_0$ is stationary in time, but only marginally stable.  Going on to order  $\mathcal{O}(\epsilon)$, we get
+\begin{equation}
+\partial_{\tau} u_0=r_+u_1-\left(1+\partial_{x}^2\right)^2u_1+2b u_0u_1-3u_0^2u_1\label{eq:SH}
+\end{equation}
+Since we have chosen $u_0$ to be stationary in time, $u_1$ must be a zero eigenvector of the SHE linearized about the solution a the saddle-node of the snaking branch.  Just as in Burke's calculation, the relevant eigenvector is the one that corresponding to the direction that adds periods to the localized solution ($u_{\text{amp}}$)  and it conveniently has an eigenvalue of 0 since we are right on the saddle-node.  Thus we can write the correction in the form $u_1=a( \tau)u_{\text{amp}}$.
+We must go on order  $\mathcal{O}(\epsilon^2)$ to determine $a$.  At this order, the equation is
+\begin{equation}
+\partial_{\tau} u_1=r_+u_2-\left(1+\partial_{x}^2\right)^2u_2+2b u_0u_2-3u_0^2u_2 +(\delta+\rho \sin\omega \tau )u_0 +bu_1^2- 3u_0 u_1^2 \label{eq:SH}
+\end{equation}
+Because the linear operator acting on $u_2$ is self-adjoint and $u_{\text{amp}}$ is in it's nullspace, we use this equation to obtain the following solvability condition that determines $a$.  
+\begin{equation}
+\alpha_1 \dot{a} = \alpha_2 (\delta+\rho\sin\omega  \tau)+\alpha_3 a^2,
+\end{equation}
+where
+\begin{align}
+\alpha_1&=\int_0^L u_{\text{amp}}(x)^2 dx\\ \nonumber
+\alpha_2&=\int_0^L u_{\text{amp}}(x) u_0(x) dx\\ \nonumber
+\alpha_3&=\int_0^L u_{\text{amp}}(x)^3(b- 3u_0(x)) dx
+\end{align}
+
+Under the proper rescaling of parameters, the equation becomes
+\begin{equation}
+ \dot{a} =  \delta+\rho\sin\omega  \tau+\alpha a^2.
+\end{equation}
+
 \end{document}
