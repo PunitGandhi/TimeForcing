@@ -5,144 +5,307 @@
 \end{figure}
 }
 
-
-
-
-%Figures
-\newcommand{\FIGmarginalstability}{
-\begin{figure}[h]\center
-\includegraphics[width=60mm]{../img/MarginalStability.png}
-\caption{\label{fig:marginalstability} Linear stability of the modified Swift-Hohenberg equation with $q=2$ and $\delta=.1$.  The shaded region indicates linearly stable parameter regimes of the homogeneous solution with a forcing $r$ for a given wavenumber $k$.}
-\end{figure}
-}
-\newcommand{\FIGbifurcationdiagramA}{
-\begin{figure}[h]\center
-\includegraphics[width=120mm]{../img/BifurcationDiagram1.png}
-\caption{\label{fig:bifurcationdiagram1} A Bifurcation diagram for the case that $q=1$ and $\delta=0$, showing a snaking branch that connects two periodic states.}
-\end{figure}
-}
-\newcommand{\FIGbifurcationdiagramB}{
-\begin{figure}[h]\center
-\includegraphics[width=120mm]{../img/BifurcationDiagram2.png}
-\caption{\label{fig:bifurcationdiagram2} A Bifurcation diagram for the case that $q=1$ and $\delta=0$, showing the connection of two branches emerging from the $P20$ periodic state.}
-\end{figure}
-}
-
-\newcommand{\FIGdoubleperiod}{
+\newcommand{\FIGfilldomain}{
 \begin{figure}[h]
   \begin{center}
     \mbox{
-      \subfloat[solution before the loop]{\includegraphics[width=60mm]{../img/dpb24.png}} \quad
-      \subfloat[solution after the loop]{\includegraphics[width=60mm]{../img/dpb24u.png}} 
+      \subfloat[]{\includegraphics[width=60mm]{../img/r0nD270drD10t050sol.png}} \quad
+      \subfloat[]{\includegraphics[width=60mm]{../img/r0nD270drD10t050phase.png} }
       }
-    \caption{Solutions along periodic branch that bifurcations from $P24$ and connects with the snaking branch from $P20$.}
-    \label{fig:doubleperiod1}
+    \caption{Oscillations of the forcing parameter in and out of the snaking region.  The forcing parameter as a function of time is given by $r\rightarrow -0.27+ 0.1\sin2\pi t/50$.  The solution (a) grows in time, eventually filling the domain and the corresponding trajectory along the max value - L2 norm phase space slice (b) shows the path taken as it passes in and out of the snaking region . }
+    \label{fig:FillDomain}
   \end{center}
-\end{figure}
-}
-
-\newcommand{\FIGsnakingA}{
-\begin{figure}[h]
-  \begin{center}
-    
-      \subfloat[1]{\includegraphics[width=60mm]{../img/sb20a1.png}} \quad
-      \subfloat[2]{\includegraphics[width=60mm]{../img/sb20a2.png}}\\
-      \subfloat[3]{\includegraphics[width=60mm]{../img/sb20a3.png}} \quad
-      \subfloat[4]{\includegraphics[width=60mm]{../img/sb20a4.png}} 
-      
-    \caption{Localized solutions along snaking branch that bifurcates from $P20$.}
-    \label{fig:snaking1}
-  \end{center}
-\end{figure}
+\end{figure} 
 }
 
 
-\newcommand{\FIGsnakingmess}{
-\begin{figure}[h]
+
+
+
+
+
+
+
+
+
+
+
+
+\newcommand{\FIGnucleationONE}{
+\begin{figure}[!htb]
   \begin{center}
     \mbox{
-      \subfloat[Example solution from third bifurcation point along $P20$]{\includegraphics[width=60mm]{../img/sb20cMess.png}} \quad
-      \subfloat[Example solution from second bifurcation point along $P24$]{\includegraphics[width=60mm]{../img/sb24bMess.png}} 
+      \subfloat[]{\includegraphics[width=60mm]{../img/NucleationSolution.png}} \quad
+      \subfloat[]{\includegraphics[width=60mm]{../img/NucleationNorm.png} }
       }
-    \caption{Examples of solutions with seemingly random pulses. These solutions fall along messy branches that bifurcate from the primary periodic solutions}
-    \label{fig:snakingmess1}
+    \caption{A simulation of the SHE with $N_{23}$, $b=1.8$ and $r=-0.20$ (e.g. $\delta\approx 0.06$) is initialized using a localized solution that is stable within the snaking region (e.g. at $r=-0.2944$). The solution growing in time (a) with red as high values and blue as low values.  The norm of the solution as it grows in time is shown in (b).  We note that the solution fills the domain with a period solution containing 39 periods on a domain of 40 characteristic wavelengths.}
+    \label{fig:nucleation1}
   \end{center}
-\end{figure}
+\end{figure}   
 }
 
-\newcommand{\FIGsnakingB}{
-\begin{figure}[h]
+
+\newcommand{\FIGnucleation}{
+ \begin{figure}[!htb]
   \begin{center}
-    
-      \subfloat[1]{\includegraphics[width=60mm]{../img/sb19a1.png}} \quad
-      \subfloat[2]{\includegraphics[width=60mm]{../img/sb19a2.png}}\\
-      \subfloat[3]{\includegraphics[width=60mm]{../img/sb19a3.png}} \quad
-      \subfloat[4]{\includegraphics[width=60mm]{../img/sb19a4.png}} 
-      
-    \caption{Localized solutions along snaking branch that bifurcates from $P19$.}
-    \label{fig:snaking19a}
+    \mbox{
+      \subfloat[]{\includegraphics[width=60mm]{../img/NucleationTime.png}} \quad
+      \subfloat[]{\includegraphics[width=60mm]{../img/FrontSpeed.png} }
+      }
+    \caption{Simulation of the SHE with $N_{23}$ with $b=1.8$ show (a) $1/T_{nuc}^2$, where $T_{nuc}$ is the time between nucleation/decay events, as a function of distance from the edge of the pinning region  $\delta$, and (b) the front speed as a function of the forcing parameter. We note that the initial solution used in these simulations was on a saddle node bifurcation of snaking branch at the closest edge of the pinning region. }
+    \label{fig:nucleation}
   \end{center}
-\end{figure}
-}
-\newcommand{\FIGbifurcationdiagramC}{
-\begin{figure}[h]\center
-\includegraphics[width=120mm]{../img/sb19a.png}
-\caption{\label{fig:bifurcationdiagram19a} A Bifurcation diagram for the case that $q=1$ and $\delta=0$, showing the first snaking branch emerging from the $P19$ periodic state.}
-\end{figure}
+\end{figure} 
 }
 
 
+\newcommand{\FIGfenuc}{
+\begin{figure}[!htb]\center
+\includegraphics[width=80mm]{../img/FEnucleation.png}
+\caption{\label{fig:FEnuc} The difference in free energy between stable localized solutions that differ by 2 periods as a function of the forcing parameter $r$ in the SHE ($\rho=0$), with $b=1.8$.}
+\end{figure}
+}
 
 
-\newcommand{\FIGsnakingC}{
-\begin{figure}[h]
+\newcommand{\FIGdtnuc}{
+\begin{figure}[!htb]\center
+\includegraphics[width=80mm]{../img/NucleationTimeOscDiff005.png}
+\caption{difference in time between nucleation events for the $\rho=5\times10^{-3}$ case and the constant forcing case ($\rho=0$) as a function of distance from the right edge of the pinning region ($\delta$) and the period of oscillation.  The simulation was initialized with a localized solution that is stable at the right edge of the pinning region.}
+    \label{fig:dTnuc}
+\end{figure}
+}
+
+
+\newcommand{\FIGfeosc}{
+\begin{figure}[!htb]
+\begin{center}
+    \mbox{
+\includegraphics[width=50mm]{../img/FEosc1.png}
+\includegraphics[width=50mm]{../img/FEosc2.png}
+\includegraphics[width=50mm]{../img/FEosc3.png}
+}
+\caption{(a)The average free energy along an oscillation for spatially periodic solutions that are als periodic in time under the time dependent forcing. The orange on the upper left corner indicates that the initial spatially periodic solution did not produce a stable oscillating solution in time. (b) The average free energy as a function of oscillation center for an oscillation period $T_{osc}=20$.  (c) The difference in free energy of the average of the oscillation and the constant forcing case.  The line represents the difference of a linear fit of the average free energy from the constant forcing case.   }
+    \label{fig:FEosc}
+\end{center}
+\end{figure}
+}
+
+
+\newcommand{\FIGnormmaxback}{
+\begin{figure}[!htb]
   \begin{center}
-    
-      \subfloat[1]{\includegraphics[width=40mm]{../img/q12sb20aL_sol1.png}} \quad
-      \subfloat[2]{\includegraphics[width=40mm]{../img/q12sb20aL_sol2.png}}\quad
-      \subfloat[3]{\includegraphics[width=40mm]{../img/q12sb20aL_sol3.png}}
-    
-      
-    \caption{Localized solutions along snaking branch that bifurcates from $P20$ and terminates on the left side of Fig.~\ref{fig:bifurcationdiagramq12}.}
-    \label{fig:snakingq12p20aL}
+    \mbox{
+      \subfloat[]{\includegraphics[width=60mm]{../img/NormrBack.png}} \quad
+      \subfloat[]{\includegraphics[width=60mm]{../img/NormMaxBack.png} }
+      }
+    \caption{(a)A plot of the time-steady localized (green dash) and periodic (red dash-dot) solutions as a function of the forcing parameter in the problem with constant $r$ in time.  The blue x indicates the localized initial solution for the simulations with time-periodic forcing.  We note that future plots will zoom into the region near this x.  (b) This same data is plotted in terms of the max value vs L2 norm of the solutions in order to provide some reference for the trajectories of the time-dependent parameter case. }
+    \label{fig:NormMaxBack}
   \end{center}
-\end{figure}
+\end{figure} 
 }
 
-\newcommand{\FIGsnakingD}{
-\begin{figure}[h]
+
+\newcommand{\FIGoscinsnake}{
+\begin{figure}[!htb]
   \begin{center}
-    
-      \subfloat[1]{\includegraphics[width=40mm]{../img/q12sb20aR_sol1.png}} \quad
-      \subfloat[2]{\includegraphics[width=40mm]{../img/q12sb20aR_sol2.png}}\quad
-      \subfloat[3]{\includegraphics[width=40mm]{../img/q12sb20aR_sol3.png}}\\
-      \subfloat[4]{\includegraphics[width=40mm]{../img/q12sb20aR_sol4.png}} \quad
-      \subfloat[5]{\includegraphics[width=40mm]{../img/q12sb20aR_sol5.png}}\quad
-      \subfloat[6]{\includegraphics[width=40mm]{../img/q12sb20aR_sol6.png}}
-      
-    \caption{Localized solutions along snaking branch that bifurcates from $P20$ and terminates on the right side of Fig.~\ref{fig:bifurcationdiagramq12}.}
-    \label{fig:snakingq12p20aR}
+    \mbox{
+      	\subfloat[$\omega=4\pi$]{\includegraphics[width=40mm]{../img/MinSnakingT05.png}} 
+	\subfloat[$\omega=2\pi/5$]{\includegraphics[width=40mm]{../img/MinSnakingT5.png}} 
+	\subfloat[$\omega=2\pi/50$]{\includegraphics[width=40mm]{../img/MinSnakingT50.png}}
+      	\subfloat[$\omega=2\pi/500$]{\includegraphics[width=40mm]{../img/MinSnakingT500.png} }
+      }
+    \caption{Oscillations of the forcing parameter about the Maxwell point within the snaking region.  The forcing parameter as a function of time is given by $r\rightarrow-0.3128+ 0.025\sin\omega t$ for various values of $\omega$ (a)-(d).  Note that these figures are plotting the maximum value of the solution vs. its L2 norm just as in Fig.~\ref{fig:NormMaxBack} except that they are zoomed into a smaller region of the phase space slice centered around the initial condition (the blue x).  The time-independent snaking branch is also shown here for reference. }
+    \label{fig:OscInSnake}
   \end{center}
-\end{figure}
+\end{figure} 
 }
 
-\newcommand{\FIGsnakingE}{
-\begin{figure}[h]
+
+\newcommand{\FIGoscoutsnake}{
+\begin{figure}[!htb]
   \begin{center}
-    
-      \subfloat[1]{\includegraphics[width=60mm]{../img/q12sb24a_sol1.png}} \quad
-      \subfloat[2]{\includegraphics[width=60mm]{../img/q12sb24a_sol2.png}}\\
-      \subfloat[3]{\includegraphics[width=60mm]{../img/q12sb24a_sol3.png}}\quad
-      \subfloat[4]{\includegraphics[width=60mm]{../img/q12sb24a_sol4.png}} 
-      
-    \caption{Localized solutions along snaking branch that bifurcates from $P24$.}
-    \label{fig:snakingq12p24a}
+    \mbox{
+      	\subfloat[$\omega=2\pi/50$]{\includegraphics[width=50mm]{../img/r0nD280drD10t050sol.png}} 
+	\subfloat[$\omega=2\pi/100$]{\includegraphics[width=50mm]{../img/r0nD280drD10t100sol.png}} 
+	\subfloat[$\omega=2\pi/200$]{\includegraphics[width=50mm]{../img/r0nD280drD10t200sol.png}} 
+      } \mbox{
+     	\subfloat[$\omega=2\pi/50$]{\includegraphics[width=50mm]{../img/r0nD280drD10t050phase.png}} 
+	\subfloat[$\omega=2\pi/100$]{\includegraphics[width=50mm]{../img/r0nD280drD10t100phase.png}} 
+	\subfloat[$\omega=2\pi/200$]{\includegraphics[width=50mm]{../img/r0nD280drD10t200phase.png}}
+}
+    \caption{Oscillations of the forcing parameter in and out of the snaking region.  The forcing parameter as a function of time is given by $r\rightarrow -0.28+ 0.1\sin\omega t$ for various values of $\omega$. (a)-(c) show the solution as a function of time and (d)-(f) show the corresponding trajectories along the max value - L2 norm phase space slice (the time-independent snaking branch and periodic branches are also shown here for reference). }
+    \label{fig:OscOutSnake}
   \end{center}
 \end{figure}
 }
 
 
+\newcommand{\FIGvcmOONE}{
+\begin{figure}[!htb]\center
+\includegraphics[width=120mm]{../img/Vcm01.png}
+\caption{The average speed at which the solution grows or decays as a function of oscillation period and oscillation center of the forcing parameter when $\rho=0.1$.  The solution had decayed by 6 or more periods over the course of the simulation (2000 units of time) in the white region, and has grown by six or more periods over the course of the simulation  in the red region.  The green region indicates where the solution has not grown or decayed on average.}
+    \label{fig:Vcm01}
+\end{figure}
+}
+
+
+\newcommand{\FIGvcmOONEzoom}{
+\begin{figure}[!htb]\center
+\includegraphics[width=120mm]{../img/Vcm01zoom.png}
+\caption{The average speed at which the solution grows or decays as a function of oscillation period and oscillation center of the forcing parameter.  The solution had decayed by 6 or more periods over the course of the simulation (2000 units of time) in the white region, and has grown by six or more periods over the course of the simulation  in the red region.  The green region indicates where the solution has not grown or decayed on average.}
+    \label{fig:Vcm01zoom}
+\end{figure}
+}
+
+
+\newcommand{\FIGvcmcompare}{
+\begin{figure}[!htb]
+\begin{center}
+    \mbox{
+\includegraphics[width=50mm]{../img/Vcm006error.png}
+\includegraphics[width=50mm]{../img/Vcm008.png}
+\includegraphics[width=50mm]{../img/Vcm010.png}
+}
+\caption{The average speed at which the solution grows or decays as a function of oscillation period and oscillation center of the forcing parameter when (a)$\rho=0.06$, (b)$\rho=0.08$, (c)$\rho=0.1$.  The solution had decayed by 6 or more periods over the course of the simulation (2000 units of time) in the white region, and has grown by six or more periods over the course of the simulation  in the red region.  The green region indicates where the solution has not grown or decayed on average.}
+    \label{fig:VcmCompare}
+\end{center}
+\end{figure}
+}
+
+
+\newcommand{\FIGholesONE}{
+\begin{figure}[!htb]
+\begin{center}
+    \mbox{
+\includegraphics[width=50mm]{../img/NucPerOsc.png}
+\includegraphics[width=50mm]{../img/NucPerOscCont.png}
+\includegraphics[width=50mm]{../img/NucPerOsc2time.png}
+}
+\caption{Nucleations per oscillation. (a)The number of nucleations per oscillation ($V_{cm} T_{osc}/\pi$)  are indicated in these graphs with varying $T_{\text{osc}}$ and $r_0$, but fixed oscillation amplitude of $\rho=0.1$.  The dark blue indicates the region that is stable on average, the solution grows by one period on each side after each oscillation in the light blue, two on each side in the green, and so on.  We note the bit of orange in the upper right corner that needs further investigation.  (b) A graph of the same data is shown with 100 evenly spaced contour lines in order to emphasize that the boundaries between the regions are relatively sharp.  (c) The location of the front as a function of time are shown for two different points within the one nucleation per oscillation region. }
+\label{fig:holes1}
+\end{center}
+\end{figure}
+}
+
+
+\newcommand{\FIGvcmONEHUNDRED}{
+\begin{figure}[!htb]\center
+\includegraphics[width=120mm]{../img/Vcm100.png}
+\caption{The average speed at which the solution grows or decays as a function of oscillation amplitude and oscillation center of the forcing parameter when $T_{osc}=100$.  The solution had decayed by six or more periods over the course of the simulation (2000 units of time) in the white region, and has grown by six or more periods over the course of the simulation  in the red region.  The green region indicates where the solution has not grown or decayed on average.}
+    \label{fig:Vcm100}
+\end{figure}
+}
+
+
+\newcommand{\FIGnucperosc}{
+\begin{figure}[!htb]
+\begin{center}
+    \mbox{
+      \subfloat[]{\includegraphics[width=60mm]{../img/NucPerOscT100.png}} \quad
+      \subfloat[]{\includegraphics[width=60mm]{../img/NucPerOscT160} }
+      }
+    \caption{Instead of plotting the speed of the front (e.g. Vcm), the number of nucleations per oscillation are indicated in these graphs with varying $\rho$ and $r_0$, but fixed oscillation period at (a)100 and (b) 160.  The dark blue regions in both graphs indicate the regions of localized solutions that do not grow on average.  The colored regions increase in nucleations per oscillations successively.  The color directly to the right of dark blue indicates one nucleation (of a period on each side of the solution) per oscillation, the next one over to the right indicates two nucleations per oscillation, and so on.  The solution decayed by one or more period  }
+    \label{fig:NucPerOscT}
+  \end{center}
+\end{figure} 
+}
+
+
+\newcommand{\FIGrtwentyeightsliceONE}{
+ \begin{figure}[!htb]
+  \begin{center}
+    \mbox{
+      	\subfloat[]{\includegraphics[width=60mm]{../img/r0nD28drD10t020sol.png}}\quad 
+      	\subfloat[]{\includegraphics[width=60mm]{../img/r0nD28drD10t020Xcm.png}} 
+      } \mbox{
+      	\subfloat[]{\includegraphics[width=60mm]{../img/r0nD28drD10t040sol.png} }\quad 
+	\subfloat[]{\includegraphics[width=60mm]{../img/r0nD28drD10t040Xcm.png} }
+      }
+    \caption{Solutions along with Xcm are shown as  function of time for a series of oscillation periods at a fixed value of $r_0=-0.28$.  We see that the solution oscillates between growing and stable for this region, as expected given Fig.~\ref{fig:Vcm01}.  The value of $V_{cm}$ is given in number of periods nucleated or decayed over the course of the simulation (2000 units of time), assuming no boundary.}
+    \label{fig:r28slice1}
+  \end{center}
+\end{figure} 
+}
+
+
+\newcommand{\FIGrtwentyeightsliceTWO}{
+ \begin{figure}[!htb]
+  \begin{center}
+        \mbox{
+	\subfloat[]{\includegraphics[width=60mm]{../img/r0nD28drD10t060sol.png} }\quad 
+	\subfloat[]{\includegraphics[width=60mm]{../img/r0nD28drD10t060Xcm.png} }
+      } \mbox{
+	\subfloat[]{\includegraphics[width=60mm]{../img/r0nD28drD10t080sol.png} }\quad
+	\subfloat[]{\includegraphics[width=60mm]{../img/r0nD28drD10t080Xcm.png} }
+      }
+    \caption{Solutions along with Xcm are shown as  function of time for a series of oscillation periods at a fixed value of $r_0=-0.28$.  We see that the solution oscillates between growing and stable for this region, as expected given Fig.~\ref{fig:Vcm01}.  The value of $V_{cm}$ is given in number of periods nucleated or decayed over the course of the simulation (2000 units of time), assuming no boundary.}
+    \label{fig:r28slice2}
+  \end{center}
+\end{figure} 
+}
+
+
+\newcommand{\FIGrtwentyeightsliceTHREE}{
+  \begin{figure}[!htb]
+  \begin{center}
+    \mbox{	
+	\subfloat[]{\includegraphics[width=60mm]{../img/r0nD28drD10t100sol.png} }\quad 
+	\subfloat[]{\includegraphics[width=60mm]{../img/r0nD28drD10t120sol.png} } 
+      } \mbox{
+	\subfloat[]{\includegraphics[width=60mm]{../img/r0nD28drD10t140sol.png} }\quad 
+	\subfloat[]{\includegraphics[width=60mm]{../img/r0nD28drD10t200sol.png} } 
+      }
+    \caption{The pattern of oscillating between stable and growing solution continues up to about $T_{osc}=140$ and then, after a longer region of stability, the solutions oscillate between stable and decaying. The value of $V_{cm}$ is given in number of periods nucleated or decayed over the course of the simulation (2000 units of time), assuming no boundary.}
+    \label{fig:r28slice3}
+  \end{center}
+\end{figure} 
+}
+
+
+\newcommand{\FIGphaseslice}{
+\begin{figure}[!htb]
+\begin{center}
+    \mbox{
+\includegraphics[width=50mm]{../img/XumaxStable.png}
+\includegraphics[width=50mm]{../img/FEnormStable.png}
+\includegraphics[width=50mm]{../img/FrontPhase.png}
+}
+\caption{Various phase space slices of solutions along $r_0=-.28$ with $\rho=-0.1$ that are periodic in time.  (a)The maximum height of the solution vs the position of the front.  the motivation here was to graph the length and heigth of the solution to give some sense of its size.  (b) The free energy of the solution vs the L2 norm. (c) the phase space of the front, the postion of the front vs its speed.  }
+    \label{fig:PhaseSlice}
+\end{center}
+\end{figure}
+}
+
+
+\newcommand{\FIGphasesliceTWO}{
+\begin{figure}[!htb]\center
+\includegraphics[width=80mm]{../img/XcmFEstablerange.png}
+\caption{Trajectories in phase space of  an orbit at the edges and center of the stable region in parameter space.}
+    \label{fig:PhaseSlice2}
+\end{figure}
+}
 
 
 
+\newcommand{\FIGholes}{
+\begin{figure}[!htb]
+\begin{center}
+    \mbox{
+\includegraphics[width=50mm]{../img/HoleQuasiStableT100rD275.png}
+\includegraphics[width=50mm]{../img/HoleStableT80rD275.png}
+\includegraphics[width=50mm]{../img/HoleStableT80rD275sol.png}
+}
+\caption{Stable and quasi-stable "hole" states in long-time simulations initialized with $\rho=0.1$, $r_0=-0.275$.  (a)$T_{\text{osc}}=100$ produces a quasistable hole stat that eventually grows into a periodic solution with 40 periods on the domain.    (b) $T_{\text{osc}}=80$ produces a stable defect state that has been presists for simulations all the way to T=20,000.  The norm of the difference of the solution at the same phase of each oscillation decays exponentially, indicated the solution is infact stable.  (c) The stable solution is shown as afunction of $x$ at $T=5000$  }
+    \label{fig:holes}
+\end{center}
+\end{figure}
+}
 
+
+\newcommand{\FIGholestability}{
+\begin{figure}[!htb]\center
+\includegraphics[width=80mm]{../img/StableDefectV0.png}
+\caption{Region of stability of hole states in parameter space.  A hole state is initialized with $\rho=0.1$ for different values of $r_0$ and $T_{\text{osc}}$, and the ratio of the value of the field at the center to that at the edge at T=20,000 is plotted here.  The blue region corresponds to solutions that had a hole at the center of the domain persist for the entire simulation.  The red regions correspond to where a peak has formed at the center, indicated that the simulation has settled on a periodic solution with 40 periods.  The dark blue region corresponds to small negative troughs at the center of the domain, indicated that a periodic solution of 39 periods has been reached.  The white corresponds to regions where a localized solution remains stable on average.}
+    \label{fig:holestability}
+\end{figure}
+}

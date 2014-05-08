@@ -3,6 +3,25 @@
 
 
 \section{Periodic forcing in time }
+As a proxy for the location of the front, we track the front of solution in terms of its first moment on half the domain:
+\begin{equation}
+X_{cm}=\frac{1}{||u||} \int_{0}^{L/2}  x u^2 dx
+\end{equation}
+where 
+\begin{equation}
+||u||= \int_{0}^{L/2}  |u|^2 dx
+\end{equation}
+This give half the distance from the center of the domain to the edge of a localized solution. The speed is then defined by $V_{cm} = d X_{cm}/dt$, and is really half the speed of the front.
+
+We note that changing the phase of the oscillation in the forcing (e.g. $\rho\rightarrow-\rho$) does not seem to affect the stable region in this graph. There is a symmetry of the equation $\rho\rightarrow -\rho$, and $t \rightarrow -t$.  
+
+
+n an attempt to provide some context to the results in the we define the ``oscillating Maxwell point" in the oscillation center $r_0$ where the average free energy along an oscillation of solution that is stable in time and  periodic in space equals the free energy of the trivial solution (e.g. zero).  For the parameter $\rho=0.1$, we find this value to be shifted to the left by about 0.5 from the Maxwell point of the constant forcing case to $r_*\approx -0.318$ (Fig.~\ref{fig:FEosc}.  The average free energy of oscillation does not have a strong dependence on the oscillation frequency, except that the stable oscillating solution does not exist for very slow frequencies in some cases.  This is because the oscillations take the system well beyond the saddle-node where the stable periodic solution of the constant forcing case is created.   
+
+Figures~\ref{fig:PhaseSlice}~and~\ref{fig:PhaseSlice2}  plot various phase space slices of the orbits of the stable cases detailed in the above figures in hopes of gaining some insight into the dynamics.
+
+\FIGphaseslice
+\FIGphasesliceTWO
 
 \subsection{schematic of solution structure and regions will oscillate through}
 \subsection{description of some behaviors exhibited (growing, decaying ,stable, etc..)}
