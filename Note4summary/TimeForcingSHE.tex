@@ -195,13 +195,13 @@ If we increase the oscillation period to 100, we see the region of stable breath
 
 For all three oscillation frequency values explored at with this amplitude, there exist oscillations of the forcing centered about values of $r_0$ greater than the center of the snaking region (and the Maxwell point) that cause the solution to decay.  In these cases, the decay happens even though the forcing spends more time above the snaking region where the solution would be expected to grow than below it.  This seems to imply that the trivial state is more strongly attracting to the left of the snaking region than the periodic state is to the right of the snaking region.  Maybe this has to do with the choice of initial condition, or with the fact that the amplitude chosen takes the system outside of the region on of bistability below the snaking region, but not above.  Similar simulations with $\rho=0.6$ so that the oscillations remain entirely within the region of bistability, so a stable breathing solution with an oscillation period of 100 about $r_0=-0.295$.  Thus the stable region in parameter space is still to the right of the center of the snaking region.   We would like to note that the region of stable breathing in the simulations did not depend on the phase of the oscillation (e.g. if the forcing parameter increased first or decreased first). 
 
-Figure~\ref{fig:Vcm01} show some results from a scan of the parameter space over the period of oscillation $T_{osc}$, and the average value of forcing $r_0$ with a fixed amplitude of oscillation, $\rho =0.1$.  We track the front of solution in terms of its first moment:
+Figure~\ref{fig:Vcm01} show some results from a scan of the parameter space over the period of oscillation $T_{osc}$, and the average value of forcing $r_0$ with a fixed amplitude of oscillation, $\rho =0.1$.  As a proxy for the location of the front, we track the front of solution in terms of its first moment on half the domain:
 \begin{equation}
-X_{cm}=\frac{1}{||u||} \int_{L/2}^{L/2}  |x| |u|^2 dx
+X_{cm}=\frac{1}{||u||} \int_{0}^{L/2}  x u^2 dx
 \end{equation}
 where 
 \begin{equation}
-||u||= \int_{L/2}^{L/2}  |u|^2 dx
+||u||= \int_{0}^{L/2}  |u|^2 dx
 \end{equation}
 This give half the distance from the center of the domain to the edge of a localized solution. The speed is then defined by $V_{cm} = d X_{cm}/dt$, and is really half the speed of the front.
 
