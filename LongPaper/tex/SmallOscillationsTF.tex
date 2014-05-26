@@ -35,9 +35,28 @@ where
 \alpha_3&=\int_0^L u_{\text{amp}}(x)^3(b- 3u_0(x)) dx
 \end{align}
 
-Under the proper rescaling of parameters, the equation becomes
+ 
+Under the proper rescaling of parameters (NEED TO BE CAREFUL ABOUT SIGNS OF COEFFICIENTS), the equation becomes
 \begin{equation}
- \dot{a} =  \delta+\rho\sin\omega  \tau+\alpha a^2.
+\dot{ a} =  1+\rho\sin \omega\tau  \pm  a^2.
+\end{equation}
+Explicitly, we take:
+\begin{align}
+a & \rightarrow \sqrt{\frac{\alpha_3}{\delta \alpha_2}} a\\ \nonumber
+\tau &\rightarrow  \sqrt{\frac{\delta \alpha_2 \alpha_3}{\alpha_1}} \tau\\ \nonumber
+\rho &\rightarrow \frac{\rho}{\delta}\\ \nonumber
+\omega &\rightarrow \frac{\alpha_1}{\sqrt{\delta \alpha_2 \alpha_3}}\omega
+\end{align}
+in order to achieve the scaled equation.  Here the sign is chosen by the sign of the product of $\alpha_2 \alpha_3$.  We also note that the scaled $\rho$ will be less than one if the oscillation remains exclusively outside of the pinning region.  Finally, we note that we can choose to normalize $u_{\text{amp}}$ such that $\alpha_1=1$.  
+We can now make the transformation $a=\mp  \dot{b}/b$ to put the equation into the form of a Mathiew equation:
+\begin{equation}
+\ddot{b} \pm (1+\rho \sin\omega \tau)b=0
 \end{equation}
 
+Fo rour choice of parameters ($b=1.8$) and a choice of normalization that sets $\alpha_1=1$, we find that $\alpha_2\approx 0.9756$ and $\alpha_3=0.2863$ (from J. Burke thesis, need to calculate myself). This implies that we need to take the plus equation, 
+
+I ASSUME THE CALCULATION IS TAKEN TO THE RIGHT OF THE PINNING REGION. THE OTHER SIDE IS ANALOGOUS, BUT SHOULD I REWRITE THE FORMULAS SO THAT THEY DESCRIBE BOTH CASES?  IT MAY MAKE THE WRITING A LITTLE MROE CONFUSING, BUT WOULD BE MORE GENERAL.
+
+
+NEED TO ADD A DISCUSSION ABOUT THE INVERTED PENDULUM PROBLEM HERE.
 \end{document}

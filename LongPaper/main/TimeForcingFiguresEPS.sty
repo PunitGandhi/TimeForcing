@@ -1,0 +1,237 @@
+
+%ConstantForcing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\FIGshesnaking}{
+\begin{figure}[!htb]\center
+\includegraphics[width=120mm]{../img/eps/BurkeSHE.eps}
+\caption{\label{fig:BurkeSHE}This figure was taken from Burke\cite{} (a) Bifurcation diagram showing the snakes-and-ladders structure of localized states. Away from the origin the snaking branches $L_0$ and $L_-$ are contained within the snaking region (shaded) between$E_-$ and $E_+$, where $r(E_-)\approx -0.3390$ and $r(E_+)\approx -0.2593$.   Solid (dotted) lines indicate stable (unstable) states. In addition, the Maxwell point $M$, occurring at $r(M)\approx -0.3128$  is indicated with a vertical dash-dot line.  The saddle node bifurcation that creates the stable periodic state occurs at $r<r(SN_P)\approx -0.3744$, defining the left edge of the bistability region.  We will also find it useful to define the center of the snaking region $C$, which corresponds to  the forcing parameter $r(C)\approx -0.2992$. (b) Sample localized profiles $u(x): (i-iv)$ lie on $L_0$, near onset and at the 1st, 3rd, and 5th saddle-nodes from the bottom, respectively; (v-viii) lie on $L_-$, near onset and at the 1st, 3rd, and 5th saddle-nodes, respectively. Parameters: $b = 1.8$.} 
+\end{figure}
+}
+
+\newcommand{\FIGshesnakingONE}{
+\begin{figure}[!htb]
+  \begin{center}
+    \mbox{
+      \subfloat[]{\includegraphics[width=70mm]{../img/eps/NormRConstantForcing.eps}} \quad
+      \subfloat[]{\includegraphics[width=70mm]{../img/eps/FrontAmplitudeConstantForcing.eps} }
+      }
+    \caption{(a) a bifurcation diagram indicating the steady state solution structure for the various regions of interest as  a fuction of the forcing $r$:  decay by  on overall amplitude dominates in $A_-$, period by period decay in the depinning region $D_-$, localized solutions are pinned  in the regions $P_{\pm}$ near the Maxwell point (indicated with a dash-dot line), period by period nucleation occurs in the depinning region $D+$, and an overall amplitude increase towards the periodic state dominates in $A_+$.  NEED TO CONFIRM $A_+$ .  (b) The same steady state solutions are now plotted in phase space slice of the maximum value of the solution and the position of the front.     }
+    \label{fig:SHEsnaking1}
+  \end{center}
+\end{figure}   
+}
+
+
+
+
+
+
+\newcommand{\FIGnucleationONE}{
+\begin{figure}[!htb]
+  \begin{center}
+    \mbox{
+      \subfloat[]{\includegraphics[width=60mm]{../img/eps/NucleationSolution.eps}} \quad
+      \subfloat[]{\includegraphics[width=60mm]{../img/eps/NucleationNorm.eps} }
+      }
+    \caption{A simulation of the SHE with $N_{23}$, $b=1.8$ and $r=-0.20$ (e.g. $\delta\approx 0.06$) is initialized using a localized solution that is stable within the snaking region (e.g. at $r=-0.2944$). The solution growing in time (a) with red as high values and blue as low values.  The norm of the solution as it grows in time is shown in (b).  We note that the solution fills the domain with a period solution containing 39 periods on a domain of 40 characteristic wavelengths.}
+    \label{fig:nucleation1}
+  \end{center}
+\end{figure}   
+}
+
+
+
+
+\newcommand{\FIGnucleation}{
+ \begin{figure}[!htb]
+  \begin{center}
+    \mbox{
+      \subfloat[]{\includegraphics[width=60mm]{../img/eps/TnucCF.eps}} \quad
+      \subfloat[]{\includegraphics[width=60mm]{../img/eps/FrontSpeedCF.eps} }
+      }
+    \caption{(a) A comparison of numerical results on depinning in SHE  with $N_{23}$ and $b=1.8$   o the leading order prediction. $1/T_{nuc}^2$ is plotted as a function of the distance $\delta$ from the pinning region for the time just below the pinning region (red circles for simulations and red dashed line for theory) and just above the pinning region (blue crosses for simulations and blue solid line for theory), where $T_{nuc}$ is the time between nucleation/decay events.  The theory is valid for approximately $\delta<10^{-4}$.  (b) the front speed as a function of the forcing parameter outside of the pinning region. We note that the initial solution used in these simulations was on a saddle node bifurcation of snaking branch at the closest edge of the pinning region and the calculations were done on a domain of 160 characteristic wavelengths.  The decay rate is faster than the nucleation rate given the same distance from the pinning region, and the decaying solutions stop depinning near $r=r(SN_P)$ where an overall amplitude decay mode takes over. }
+    \label{fig:nucleation}
+  \end{center}
+\end{figure} 
+}
+
+\newcommand{\FIGdecaytransition}{
+ \begin{figure}[!htb]
+  \begin{center}
+    \mbox{
+      \subfloat[]{\includegraphics[width=60mm]{../img/eps/sol_rD3740.eps}} \quad
+      \subfloat[]{\includegraphics[width=60mm]{../img/eps/sol_rD3750.eps} }
+      }
+    \caption{ Decay of a localized solution that is stable at $r(E_-)$ and has been initialized with a forcing (a) above $r(SN_P)$, $r\approx -.374$ and (b) below $r(SN_P)$, $r\approx -.375$.  We see a transition from decaying period by period towards the trivial solution to decaying by an overall amplitude decrease towards the trivial solution. }
+    \label{fig:DecayTransition}
+  \end{center}
+\end{figure} 
+}
+
+\newcommand{\FIGeckhausbifurcation}{
+\begin{figure}[!htb]
+\begin{center}
+\mbox{
+\subfloat[]{\includegraphics[width=50mm]{../img/eps/DefectBifurcation.eps}}
+\subfloat[]{\includegraphics[width=50mm]{../img/eps/DefectBifurcationSNzoom.eps}}
+\subfloat[]{\includegraphics[width=50mm]{../img/eps/DefectBifurcationR0zoom.eps}}
+
+}
+\caption{(a) An unstable defect solution branch is shown (red dashed line) on the bifurcation diagram.  (b)  This defect branch emerges from the periodic branch $P_{39}$ (light blue dotted line) where the snaking branch with a peak at the center of the localized solutions (blue solid line) reconnects.  (c) $P_{39}$ is formed from a bifurcation on the trivial branch at $r$ slightly greater than zero.}
+    \label{fig:EckhausBifurcation}
+\end{center}
+\end{figure}
+}
+
+\newcommand{\FIGdefectbranch}{
+\begin{figure}[!htb]
+\begin{center}
+\mbox{
+\subfloat[]{\includegraphics[width=50mm]{../img/eps/DefectBifurcation.eps}}
+\subfloat[]{\includegraphics[width=50mm]{../img/eps/DfctSolPinning.eps}}
+\subfloat[]{\includegraphics[width=50mm]{../img/eps/DfctSolRP.eps}}
+}
+\caption{(a) An unstable defect solution branch is shown (red dashed line) on the bifurcation diagram.    A defect solution for the constant forcing case that is stationary at (b) a value of $r$ within the pinning region and at (c) a positive value of $r$ .}
+    \label{fig:DefectBranch}
+\end{center}
+\end{figure}
+}
+
+
+
+
+%PeriodicForcing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\FIGportraits}{
+\begin{figure}
+\begin{center}
+%\includegraphics[]{../img/eps/portraits.eps}
+\caption{{\bf Write this down.}}
+\label{fig:portraits}
+
+\end{center}
+\end{figure}
+}
+
+\newcommand{\FIGpreview}{
+\begin{figure}
+\begin{center}
+\mbox{
+\subfloat[$T=80$]{\includegraphics[width=50mm]{../img/eps/spacetime_r2795_T80.eps}} 
+\subfloat[$T=180$]{\includegraphics[width=50mm]{../img/eps/spacetime_r2795_T180.eps}} 
+\subfloat[$T=280$]{\includegraphics[width=50mm]{../img/eps/spacetime_r2795_T280.eps}}
+}
+\mbox{
+\subfloat[$T=80$]{\includegraphics[width=50mm]{../img/eps/FrontAmplitude_r2795_T80.eps}} 
+\subfloat[$T=180$]{\includegraphics[width=50mm]{../img/eps/FrontAmplitude_r2795_T180.eps}} 
+\subfloat[$T=280$]{\includegraphics[width=50mm]{../img/eps/FrontAmplitude_r2795_T280.eps}} 
+}
+\caption{Preliminary simulations initialized by a stationary spatially localized solution at $r=-0.28$. The forcing parameter is chosen to be  $r(t) = -0.28 + 0.1 \sin (2 \pi t / T)$. (a)--(c) show the solution in a space-time plot; (d)--(f) represents the same phase portrait as in figure \ref{portraits}. Snaking solutions and the spatially periodic branch are shown in ???. The period $T$ is indicated below each plot.}
+\label{fig:preview}
+\end{center}
+\end{figure}
+}
+
+
+
+%LargeOscillations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\FIGvcmstable}{
+\begin{figure}[!htb]\center
+\includegraphics[width=120mm]{../img/eps/VcmStable400.eps}
+\caption{\label{fig:VcmStable} Region of existence for periodic orbits with an amplitude of oscillation $\rho=0.1$.  The simulations is initialized with a localized solution that is stable with a constant forcing of $r_0$ and the blue region indicates where the solution does not grow or decay on average.  The average velocity of the front is negative (e.g. the decaying) in the white region and positive (e.g. the solution is growing) in the red region.}
+\end{figure}
+}
+
+
+\newcommand{\FIGconvergedperiod}{
+\begin{figure}[!htb]
+  \begin{center}
+        \mbox{
+     	\subfloat[]{\includegraphics[width=50mm]{../img/eps/drD10r0nD260t010converge.eps}} 
+	\subfloat[]{\includegraphics[width=50mm]{../img/eps/drD10r0nD280t100converge.eps}} 
+	\subfloat[]{\includegraphics[width=50mm]{../img/eps/drD10r0nD279t300converge.eps}}
+      } \mbox{
+     	\subfloat[]{\includegraphics[width=50mm]{../img/eps/drD10r0nD260t010phase.eps}} 
+	\subfloat[]{\includegraphics[width=50mm]{../img/eps/drD10r0nD280t100phase.eps}} 
+	\subfloat[]{\includegraphics[width=50mm]{../img/eps/drD10r0nD279t300phase.eps}}
+}
+    \mbox{
+      	\subfloat[$T=10$, $r_0=-0.26$]{\includegraphics[width=50mm]{../img/eps/drD10r0nD260t010sol.eps}} 
+	\subfloat[$T=100$, $r_0=-0.28$]{\includegraphics[width=50mm]{../img/eps/drD10r0nD280t100sol.eps}} 
+	\subfloat[$T=300$, $r_0=-0.279$]{\includegraphics[width=50mm]{../img/eps/drD10r0nD279t300sol.eps}} 
+}
+    \caption{Convergence of periodic orbits.  W. (a)-(c) show the $L_2$ norm of the difference of the solution from one exactly one oscillation period prior. (d)-(f) show the corresponding trajectories of the converged orbit along the slice of front postion vs. amplitude and (g)-(i) show spacetime plots of the solution along one orbit. }
+    \label{fig:ConvergedPeriod}
+  \end{center}
+\end{figure}
+}
+
+
+
+\newcommand{\FIGvcmcompare}{
+\begin{figure}[!htb]
+\begin{center}
+    \mbox{
+\includegraphics[width=50mm]{../img/eps/Vcm06.eps}
+\includegraphics[width=50mm]{../img/eps/Vcm08.eps}
+\includegraphics[width=50mm]{../img/eps/Vcm10.eps}
+}
+\caption{The average speed at which the solution grows or decays as a function of oscillation period and oscillation center of the forcing parameter when (a)$\rho=0.06$, (b)$\rho=0.08$, (c)$\rho=0.1$.  The solution had decayed by one or more periods over the course of the simulation (20 oscillations of the forcing) in the white region, and has grown by one or more periods over the course of the simulation  in the red region.  The blue region indicates where the solution has not grown or decayed on average.}
+    \label{fig:VcmCompare}
+\end{center}
+\end{figure}
+}
+
+
+\newcommand{\FIGvcm}{
+\begin{figure}[!htb]\center
+\includegraphics[width=120mm]{../img/eps/VcmXpO400.eps}
+\caption{\label{fig:Vcm}Growth and decay of localized solutions with an amplitude of oscillation $\rho=0.1$.  The simulations is initialized with a localized solution that is stable with a constant forcing of $r_0$ and the central green region indicates where the solution does not grow or decay on average (corresponding to the blue region of Fig.~\ref{fig:VcmStable400}).  The light blue region imediately to the left indicates decay by one period on each side per oscillation,  the next one decays by two periods per oscillation, and so on.    The solution grows by one period on each side per oscillation in the region immediately to the right, and this increases in integer values until 9 periods on a side per oscillation is reached in the upper right corner.  The white region to the left indicates where amplitude decay dominates and the solution decays to the trivial one within one oscllation.}
+\end{figure}
+}
+
+
+\newcommand{\FIGvcmtransition}{
+\begin{figure}[!htb]
+\begin{center}
+    \mbox{
+\includegraphics[width=80mm]{../img/eps/VcmSliceT100.eps}
+\includegraphics[width=80mm]{../img/eps/VcmTransitionsT100.eps}
+}
+\caption{ (a) The speed of the front as a function of oscillation center $r_0$ with a fixed oscillation period $T=100$ within the region of decay.  The plateaus correspond to an integer number of period decays per oscillation.  There is a cliff to the left marking the transition to amplitude-dominated decay as opposed to decay by front motion. (b) A logarithmic plot of the length of the plateau and the transition region, showing the approach of an accumulation point where the cliff forms.       }
+    \label{fig:VcmTransition}
+\end{center}
+\end{figure}
+}
+
+
+
+\newcommand{\FIGvcmlines}{
+\begin{figure}[!htb]
+\begin{center}
+    \mbox{
+\includegraphics[width=50mm]{../img/eps/VcmGrow.eps}
+\includegraphics[width=50mm]{../img/eps/VcmDecay.eps}
+\includegraphics[width=50mm]{../img/eps/VcmLines.eps}
+}
+\caption{Lines indicating transitions between the number of periods of (a) growth and (b) decay on each side of the localized solution during one oscillation of the forcing.  There is a successive increase in the rate of growth and decay as one moves up the graph.  The lines are superimposed over the data from numerical simulations in (c).  The region of periodic solutions are where the growth matches the decay. }
+    \label{fig:VcmLines}
+\end{center}
+\end{figure}
+}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+

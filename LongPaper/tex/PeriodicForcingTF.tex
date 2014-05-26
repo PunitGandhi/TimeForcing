@@ -2,7 +2,76 @@
 \begin{document}
 
 
-\section{Periodic forcing in time }
+\section{Periodically forced localized patterns}
+
+Oscillations in time arise due to imperfect control of the forcing in experiments or to fluctuating external conditions in nature.
+Studies of pattern formation in time-dependent systems have illustrated that non-trivial behaviors can easily be observed \cite{Vilar1997spatiotemporal,Rucklidge2009design}.
+In particular, patterns absent from steady systems can be reached when the parametric conditions are changed back and forth in a periodic way between two steady configurations.
+This has been shown in the Swift--Hohenberg equation, where two configurations known for exhibiting spatially homogeneous states are alterned sufficiently rapidly to give rise to oscillatory patterns \cite{buceta2001stationary}.
+In a more recent example, Belykh {\it et al.} \cite{belykh2013multistable} designed two simple systems.
+One of them admits one and only fixed point, attracting all initial conditions. 
+The other system admits the same fixed point, albeit repelling, and an attracting periodic orbit.
+A random switch is implemented that allows to jump from one system to the other while the dynamics runs its course.
+When the switching is done fast enough, one expects the system to behave like an averaged system.
+In their case, the averaged system is bistable between the periodic orbit and the fixed point and admits an additional unstable solution.
+The authors found that this unstable solution was acting as a ghost attractor in the switching system, the switch providing a stochastic law for the time spent by the solution close to the ghost.
+
+The one-dimensional Swift--Hohenberg equation provides a more complex framework: phase space is infinite dimensional and a large number of solutions coexist.
+We are particularly interested in the fate of spatially localized initial conditions subject to oscillatory forcing.
+It is not rare that the snaking region comprising most of the spatially localized solutions be small in extent (typically less than $1\%$ \cite{Batiste2006spatially,Schneider2010snakes,Beaume2013localized} and rarely up to $10\%$ of the total forcing \cite{Beaume2013convectons}).
+Thus, we restrict our attention to the effect of smooth oscillations bringing the system from regimes that are subcritical to some supercritical to the snaking and back again, i.e. $r(t) = r_0 + \rho \sin(\omega t)$ where $r_0 - \rho < r_{l}$ and $r_0 + \rho > r_{r}$ with $r_0$ the center of oscillation, $\rho$ the amplitude of oscillation.
+%define r_l and r_r in previous paragraphs
+In this case, the picture can be simplified in the following way:
+\begin{itemize}
+\item Regime 1: on the left of the snaking, below the saddle-node of the periodic branch $r<r_P$, only one stable state is observed: the trivial one.
+\item Regime 2: on the left of the snaking, but close enough, there is competition between two stable states: the trivial and the spatially periodic ones. In this region, the free energy of the trivial state is lower than that of the spatially periodic one ($r<r_M$). As a result, spatially localized initial conditions taken on the left of the snaking would lose rolls and decay down to the trivial solution.
+\item Regime 3: in the snaking region, there is a large number of coexisting states: trivial, spatially periodic and spatially localized with varied number of rolls. The interaction between all these states is complex and depends on their respective non-trivial basin of attraction.
+\item Regime 4: on the right of the snaking, but for $r<0$, the same competition as on the left of the snaking arises, however, this region is above the Maxwell point. The spatially periodic state has lower energy than the trivial state and spatially localized initial conditions would nucleate rolls to eventually settle on the spatially periodic fixed point.
+\item Regime 5: on the right of the snaking, but for $r>0$, the only stable state relevant is the spatially periodic one.
+\end{itemize}
+These regimes are depicted in the phase portraits in figure \ref{fig:portraits}.
+
+\FIGportraits
+
+The figure also introduces values that will be important to the understanding of the dynamics: $A = \max(u)$ which is the amplitude of the pattern and $f = ???$ which is a measure of the size of the localized pattern, i.e., the distance between the pinning fronts.
+In addition, figure \ref{fig:portraits} displays the dominant dynamics of a spatially localized state in the given regime.
+When the conditions are those of regime 1, the dominant dynamics is that of a body mode and any localized initial condition sees its amplitude drop homogeneously before dying out.
+This regime is reached when we are far away from the snaking, but not necessarily below the saddle-node of the periodic states.
+There can therefore be spatially periodic solutions to complete the picture but these are not found to interact with the dynamics of spatially localized solutions.
+The second regime is reached closer to the snaking but still for $r<r_l$.
+This regime is bistable but most spatially localized structures are eventually attracted by the trivial solution.
+The typical decay of these solutions is dominated by an edge mode that is responsible for the progressive vanishing of the end rolls while the amplitude of the other rolls is maintained.
+Only once the structure is small enough in extent does the amplitude drops and the solution converges to the trivial state.
+The third regime corresponds to the snaking region where localized solutions are present in their time-independent form.
+Spatially localized initial conditions in this region tend to converge to the closest stable stationary localized snaking solution.
+When $r$ is increased above the snaking region, spatially localized initial conditions transition to the spatially periodic state.
+For $r<0$ (regime 4), the background trivial state is stable and the localized pattern grows by adding rolls under the influence of the edge mode until the pattern fills the domain.
+In regime 5, the background state is unstable and rolls start to grow everywhere, leading to a fast transition to the spatially periodic solution.
+Note that in figure \ref{fig:portraits}, regimes 4 and 5 are undistinguishable.
+This does not harm the interpretation of our results as we focus on regimes 2 and 4 with excursions into regime 3 and despite often reaching regime 1 for brief moments, we never reached regime 5.
+
+Figure \ref{fig:preview} shows the outcome of preliminary simulations revealing unexpected behaviors.
+\FIGpreview
+
+
+The simulations have been set up using the same stationary spatially localized solution at $r=-0.28$ as initial condition and the time-dependent forcing parameter is given by $r(t) = -0.28 + 0.1 \sin (2 \pi t / T)$ where $T$ is a variable period indicated in the figure.
+All the three simulations have been performed with identical conditions except for the forcing period.
+Figure \ref{fig:preview}(b,e) shows a stable periodic orbit obtained for $T=180$, indicating that excursions in regimes 2 and 4 compensate each other by removing and nucleating $4$ rolls successively.
+If the period is changed to a lower value ($T=80$ in figure \ref{fig:preview}(a,d)) or a higher value ($T=280$ in figure \ref{fig:preview}(c,f)), no periodic orbit is reached in the first place.
+Instead the initial condition evolved into transients consisting of moving fronts.
+The former case exhibits progressive nucleation of rolls, one per period, while the latter shows progressive shrinking of the structure, with the same rate per period, until the amplitude vanishes (see phase portrait in figure \ref{preview}(e)).
+We investigate in the next section the existence of stable periodic orbits as the period $T$ and the center of the oscillations $r_0$ are varied.
+Another interesting feature is shown for $T=80$ (figures \ref{fig:preview}(a,d)), where the solution grows by nucleating one roll during each period but does not settle onto the spatially periodic state.
+The end state is rather a periodic orbit presenting a defect at the edge of the (periodic) domain.
+This ghost solution is investigated further in a later section.
+
+
+
+
+
+
+\subsection{stuff that punit thought might fit into this section from before cedric wrote it}
+
 As a proxy for the location of the front, we track the front of solution in terms of its first moment on half the domain:
 \begin{equation}
 X_{cm}=\frac{1}{||u||} \int_{0}^{L/2}  x u^2 dx
@@ -22,10 +91,6 @@ Figures~\ref{fig:PhaseSlice}~and~\ref{fig:PhaseSlice2}  plot various phase space
 
 \FIGphaseslice
 \FIGphasesliceTWO
-
-\subsection{schematic of solution structure and regions will oscillate through}
-\subsection{description of some behaviors exhibited (growing, decaying ,stable, etc..)}
-\subsection{descrption of ways to visualize solutions (Xcm,Vcm, slices of phase space we will use, etc..)}
 
 
 \end{document}

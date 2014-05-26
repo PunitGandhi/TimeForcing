@@ -3,29 +3,37 @@
 
 
 \section{Stability, Growth, and Decay of localized solutions under large oscillations }
+
+We now turn to oscillations of the forcing with an amplitude greater than that of the pinning region.   The system,  initialized with a localized solution that is stable for the constant forcing case at the center of the oscillation, will spend its time alternating between growth and decay.    When the growth exactly balances the decay over the course of an oscillation, periodic solutions are produced that ``breathe" with the oscillation period. Otherwise, we see either growth or decay of the localized solution that was once stable in the constant forcing case. 
+
+ In many cases we consider, the oscillation even takes the system to beyond $r_{SN}$ where there no longer exists a periodic solution.  It is near this value of $r$ that localized solutions in the constantly forced system decay by an overall amplitude decrease instead of by having periods decay symmetrically off of the ends.  If the solution spends enough time in this region, the solution will decay to the trivial one no amount of time in in the region of growth will allow for recovery of the solution.  Note that we have assumed that the system never leaves the region of stability for the trivial state (e.g. $r<0$ for the entire oscillation).
+
+
+
 \subsection{Periodic oscillations of the solution}
+Given a particular oscillation amplitude, we find a range of values for the oscillation center ($r_0$) and oscillation period ($T$) that strikes the necessary balance between growth and decay to create periodic solutions.  For short periods where there is not enough time for nucleation and decay within an oscillation, the periodic solutions span the entire pinning region.   While the general trend of the range is to narrow for increasing oscillation periods, it does not narrow monotically -- ``sweet spots" where the range is larger than the pinched regions above and below occur at regular intervals of the oscillation period.  For $\rho=0.1$ shown in Fig.~\ref{fig:VcmStable}, the region of existence of periodic orbits shifts to increased values of $r_0$.  It asymptotes to near $r_0\approx -.275$, which is just at the threshold when the system starts to spend time in the region where amplitude decay takes over period decay as the leading mode of decay.    In the limit that the period goes to infinity, it is impossible to have a periodic orbit if the system spends any time in this region. 
+\FIGvcmstable
 
-We now turn to oscillations of the forcing with an amplitude greater than that of the pinning region.   The system,  initialized with a localized solution that is stable for the constant forcing case at the center of the oscillation, will spend its time alternating between growth and decay.  In many cases we consider, the oscillation even takes the system to beyond $r_{SN}$ where there no longer exists a periodic solution.  It is near this value of $r$ that localized solutions in the constantly forced system decay by an overall amplitude decrease instead of by having periods decay symmetrically off of the ends.     When the growth exactly balances the decay, periodic solutions are produced that ``breathe" with the oscillation period. Given a particular oscillation amplitude, we find a range of values for the oscillation center for which these periodic solutions can exist at each value of the oscillation period.  While the general trend of the range is to narrow for increasing oscillation periods, it does not narrow monotically -- ``sweet spots" where the range is larger than the pinched regions above and below occur at regular intervals of the oscillation period.  As we increase the oscillation amplitude, the  pinching regions are stretched out in oscillation period $T_{osc}$ and shifted to less negative values of $r_0$.  
+Except for at very fast oscillations, the Maxwell point of the constant forced system falls to the left of the region of existence for periodic orbits.  One might expect the orbits to be transients that are weakly unstable because they have a negative average energy and leave the pinning region for an appreciable amount of time.  However, Our simulations show (Fig.~\ref{fig:ConvergedPeriod}) that these  periodic orbits persist for very long times and the change in the solution from one oscillation to the next exponentially decays to machine precision.   The $L_2$ norm of the difference between the solutions at the start of each oscillation exponentially decay for three different sets of $r_0$ and $T$ within the region of existence of periodic orbits.  Space-time plots of the solution and phase space slices that show the front position and the maximum value of the solution are included for each of the converged orbits as well. 
+\FIGconvergedperiod
+The solution ``breathes" more for longer period oscillations where the system spends longer timespans outside of the pinning region of the constant forcing case.   Furthermore, there is an asymmetry between the rates of the growing and shrinking parts of the orbit because the nucleation process to the right of the pinning region happens slower than the decay process to the left.   
 
 
-
-
+ We can also consider effect  different amplitudes of the oscillation have on the stable region.   Oscillations amplitudes must be greater than about $\rho\approx .04$ in order to exit both sides of the pinning region during one oscillation.    As we increase the oscillation amplitude,  the system spends a larger amount of time outside of the pinning region for a given oscillation period and a the system crosses the threshold into amplitude-dominated decay for a larger range of values of $r_0$.  As a result, the  pinching regions are stretched out in oscillation period $T_{osc}$ and shifted to less negative values of $r_0$.    
 \FIGvcmcompare
 
 
-
-	\subsubsection{stable region for $\rho=.1,.8,.6$}
-	\subsubsection{$\rho$ vs $r_0$, Tosc=100}
-
 \subsection{Growth and decay}
-For the solutions that do not form periodic orbits, we can classify their growth and decay in terms of the number of periods gained or lost after one full period of the forcing.  This reveals a 
+For the solutions that do not form periodic orbits, we can classify their growth and decay in terms of the number of periods gained or lost after one full period of the forcing.  This reveals a partition of the pinning region with a very regular structure (Fig.~\ref{fig:Vcm}).  In the upper left corner of the figure, there is a cliff that indicates where a localized solution that is stable with a constant forcing of $r_0$ will decay to zero within one oscillation via the amplitude decay.  As we move the right, the different colored regions indicate the number of periods that are gained or lost after one full oscillation.
+\FIGvcm
+ The central region corresponds to the stable region of Fig.~\ref{fig:VcmStable}.  Each successive band has an increase of one period per side growth (to the right) or decay (to the left) from the previous one.  Striking are the upward and downward slanting curves that connect the edges of these regions (Fig.~\ref{VcmLines}).  The downward slanting curves are associated with the growing portion of the oscillation and indicate transitions to the number of periods gained during this part.  At the bottom of the graph, the oscillation is too fast for any nucleations to occur.  The solution gains one period per side within the band directly above, two in the band above this, and so on.  In the upper righthand corner, the solution gains 12 periods during the part of the oscillation that the system is to the right of the pinning region.  A similar pattern occurs with the upward sloping curves, except that they are associated with the portion of the oscillation that takes the system to the left of the pinning region.  The lines tend to accumulate at the cliff that marks the transition to amplitude-dominated decay.
+\FIGvcmlines
+The boundaries between the regions are represented as lines here, but actually have a finite size.  Figure~\ref{fig:VcmTransition} shows a horizontal slice of Fig.~\ref{fig:Vcm} at T=100.  There are very clear plataues which correspond to an integer number of periods decaying in an oscillation, but there are also transition regions inbetween.  A logarighmic plot of the size of the transition regions and plateues for decaying solution point to an accumulation point of these regions at the cliff. (SHOULD I INVESTIGATE THE GROWING SOLUTION PLATEAUS AND TRANSITIONS?)   
+(NEED TO EXTRAPOLATE THE PLATEAU SIZES ON GRAPH)
+\FIGvcmtransition
 
-
-
-	\subsubsection{big detailed figure of nucleations per oscillation}
-	\subsubsection{stability lines and avoided crossings?}
-	\subsubsection{simple model interpretaion}
-
+\subsubsection{stability lines and avoided crossings?}
+\subsection{simple model interpretaion??}
 \subsection{some asymptotic calculations???}
 
 \end{document}
